@@ -2649,6 +2649,9 @@ VariableGenePlot <- function(
 #' @export
 #'
 VizClassification <- function(object, clusters, ...) {
+    #####********Shao'ang Wen added the below sentences*********#########
+    out<-clusters
+    #######
   cluster.dist <- prop.table(x = table(out)) # What is out?
   object@meta.data$Classification <- numeric(nrow(x = object@meta.data))
   for (cluster in 1:length(x = cluster.dist)) {
