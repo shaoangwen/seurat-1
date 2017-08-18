@@ -287,6 +287,9 @@ ClassifyCells <- function(
     ncol = ncol(x = new.data)
   )
   rownames(x = data.to.add) <- genes.to.add
+      #####*******Shao'ang Wen added the below 1 sentence**********##############
+	    colnames(data.to.add)<-colnames(new.data)  
+    ########
   new.data <- rbind(new.data, data.to.add)
   new.data <- new.data[features, ]
   new.data <- as.matrix(x = t(x = new.data))
